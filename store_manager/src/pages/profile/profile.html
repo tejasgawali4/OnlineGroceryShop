@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <p>Name : {{userDetails?.sname}}</p>
+  </ion-item>
+  <ion-item>
+    <p>Mobile : {{userDetails?.smobile}}</p>
+  </ion-item>
+  <ion-item>
+    <p>Username : {{userDetails?.susername}}</p>
+  </ion-item>
+  <ion-item>
+    <p (click)="onlogout()">Logout</p>
+  </ion-item>
+  <p>Ver. 1.0</p>
+</ion-content>

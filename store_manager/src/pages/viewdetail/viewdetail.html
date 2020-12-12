@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{orders?.orderid}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-row>
+    <ion-col col-6>Name : </ion-col><ion-col col-6>{{orders?.fname}}</ion-col>
+    <ion-col col-6>Mobile : </ion-col><ion-col col-6>{{orders?.mobile}}</ion-col>
+    <ion-col col-6>PayType : </ion-col><ion-col col-6>{{orders?.paymenttype}}</ion-col>
+    <ion-col col-6>PayID : </ion-col><ion-col col-6>{{orders?.payid}}</ion-col>
+    <ion-col col-6>Area : </ion-col><ion-col col-6>{{orders?.area}}</ion-col>
+    <ion-col col-6>Address : </ion-col><ion-col col-6>{{orders?.address}}</ion-col>
+    <ion-col col-6>Coupon : </ion-col><ion-col col-6>{{orders?.coupon}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      #
+    </ion-col>
+    <ion-col>
+      Item
+    </ion-col>
+    <ion-col>
+      Type
+    </ion-col>
+    <ion-col>
+      Qty
+    </ion-col>
+    <ion-col>
+      Price
+    </ion-col>
+    <ion-col>
+      Total
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let dtl of orderdetails;  let i = index;">
+    <ion-col>
+      {{i + 1}}
+    </ion-col>
+    <ion-col>
+      {{dtl.itemname}}
+    </ion-col>
+    <ion-col>
+      {{dtl.itemquantity}}{{dtl.itemquantitytype}}
+    </ion-col>
+    <ion-col>
+      {{dtl.Mquantity}}
+    </ion-col>
+    <ion-col>
+      ₹{{dtl.itemprice}}
+    </ion-col>
+    <ion-col>
+      ₹{{dtl.Mquantity * dtl.itemprice}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-8>
+
+    </ion-col>
+    <ion-col col-4><b>Shipping</b> : ₹{{orders?.shipping}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-8>
+
+    </ion-col>
+    <ion-col col-4><b>Coupon</b> : -₹{{orders?.couponprice}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-8>
+
+    </ion-col>
+    <ion-col col-4><b>Total</b> : ₹{{orders?.total}}
+    </ion-col>
+  </ion-row>
+</ion-content>

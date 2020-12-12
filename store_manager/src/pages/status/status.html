@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{orders?.id}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <p>Order ID : {{orders?.orderid}}</p>
+  </ion-item>
+  <ion-item>
+    <p>Name : {{orders?.fname}}</p>
+  </ion-item>
+  <ion-item>
+    <p>Mobile : {{orders?.mobile}}</p>
+  </ion-item>
+  <ion-item>
+    <p>Paytype : {{orders?.paymenttype}}</p>
+  </ion-item>
+  <ion-item>
+    <p>Delivery Type : {{orders?.dtype}}</p>
+  </ion-item>
+  <ion-item>
+    <p>Total : R{{orders?.total}}</p>
+  </ion-item>
+
+  <ion-item>
+    <p>Status : {{orders?.status}}</p>
+  </ion-item>
+
+
+  <ion-item>
+      <ion-label stacked>Select  Delivery Person</ion-label>
+      <ion-select [(ngModel)]="postdata.deliveryboy">
+      <ng-container *ngFor="let del of ddata;  let i = index;">
+        <ion-option [value]="del.id">{{del.dname}}</ion-option>
+      </ng-container>     
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Status</ion-label>
+    <ion-select [(ngModel)]="postdata.status">
+      <ion-option value="Confirmed">Confirmed</ion-option>
+      <ion-option value="Preparing">Preparing</ion-option>
+      <ion-option value="On Way">On Way</ion-option>
+      <ion-option value="Delivered">Delivered</ion-option>
+      <ion-option value="Cancelled">Cancelled</ion-option>
+  </ion-select>
+</ion-item>
+
+    <button (click)="doupdate()" ion-button round>Update</button>
+
+</ion-content>

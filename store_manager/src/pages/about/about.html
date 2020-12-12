@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Delivered Orders</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <div class="container" *ngFor="let order of orders;  let i = index;">
+    <ng-container *ngIf="order.status == 'Delivered'">
+    <ion-row>
+      <ion-col col-6>
+        <p><b>Name</b>  : {{order.fname}}</p>
+        <p><b>Mobile</b>  : {{order.mobile}}</p>
+        <p><b>Pay Type</b>  : {{order.paymenttype}}</p>
+        <p><b>Total</b>  : ₹{{order.total}}</p>
+        <p><b>Status</b> : {{order.status}}</p>
+      </ion-col>
+      <ion-col col-6>
+          <p><b>Order No</b>  : {{order.orderid}}</p>
+          <p><b>City</b>  : {{order.city}}</p>
+          <p><b>Area</b>  : {{order.area}}</p>
+          <p><b>Address</b>  : {{order.address}}</p>
+          <p><b>Order Time</b> : {{order.ordertime}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button disabled ion-button><ion-icon name="ios-checkmark-circle"></ion-icon>&nbsp;&nbsp;Deliver</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button (click)="viewOrder(order.orderid)"><ion-icon name="ios-clipboard"></ion-icon>&nbsp;&nbsp;View Details</button>
+      </ion-col>
+      <ion-col>
+        <a href="tel:{{order.mobile}}" ion-button><ion-icon name="ios-call"></ion-icon>&nbsp;&nbsp;Call</a>
+      </ion-col>
+      <ion-col>
+        <a target="_blank" href="https://www.google.com/maps?q={{order.lat}},{{order.lng}}" ion-button><ion-icon name="ios-navigate"></ion-icon>&nbsp;&nbsp;Map</a>
+      </ion-col>
+    </ion-row>
+  </ng-container>
+  </div>
+</ion-content>

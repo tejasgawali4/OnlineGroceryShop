@@ -1,0 +1,28 @@
+page-about {
+
+    p{
+        padding:0;
+        margin:0;
+        margin-bottom:3px;
+    }
+
+    .scroll-content{
+        background: #f8f8f8 ;
+    }
+
+    .container .row:nth-child(2){
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    .container .button{
+        padding: 0.7rem 0.9rem;
+        background: rgb(224, 224, 224);
+        height: auto;
+        font-size: 1.6rem;
+    }
+
+    .button:nth-child(1){
+       background: #3ac746;
+    }
+    
+}

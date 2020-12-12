@@ -1,0 +1,35 @@
+page-login {
+
+    .container{
+        width: 80%;
+        margin: 5rem auto;
+        text-align: center;
+    }
+
+    .container img{
+        width: 22rem;
+    }
+
+    .login{
+        text-align: center;
+    }
+
+    .login h1{
+        font-weight: bolder;
+        color: #3ac746;
+    }
+
+    .login .input{
+        padding:10px;
+    }
+
+    .login .button{
+        margin-top: 3rem;
+        background: #3ac746;
+        width: 45%;
+    }
+
+    .login .icon{
+        color: #3ac746;
+    }
+}

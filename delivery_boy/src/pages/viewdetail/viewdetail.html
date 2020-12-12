@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{orders?.orderid}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+      #
+    </ion-col>
+    <ion-col>
+      Item
+    </ion-col>
+    <ion-col>
+      Type
+    </ion-col>
+    <ion-col>
+      Qty
+    </ion-col>
+    <ion-col>
+      Price
+    </ion-col>
+    <ion-col>
+      Total
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let dtl of orderdetails;  let i = index;">
+    <ion-col>
+      {{i + 1}}
+    </ion-col>
+    <ion-col>
+      {{dtl.itemname}}
+    </ion-col>
+    <ion-col>
+      {{dtl.itemquantity}}{{dtl.itemquantitytype}}
+    </ion-col>
+    <ion-col>
+      {{dtl.Mquantity}}
+    </ion-col>
+    <ion-col>
+      ₹{{dtl.itemprice}}
+    </ion-col>
+    <ion-col>
+      ₹{{dtl.Mquantity * dtl.itemprice}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-8>
+
+    </ion-col>
+    <ion-col col-4><b>Shipping</b> : ₹{{orders?.shipping}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-8>
+
+    </ion-col>
+    <ion-col col-4><b>Coupon</b> : -₹{{orders?.couponprice}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-8>
+
+    </ion-col>
+    <ion-col col-4><b>Total</b> : ₹{{orders?.total}}
+    </ion-col>
+  </ion-row>
+</ion-content>

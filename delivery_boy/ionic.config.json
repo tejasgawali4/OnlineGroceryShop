@@ -1,0 +1,7 @@
+{
+  "name": "scurite_delivery_boy",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

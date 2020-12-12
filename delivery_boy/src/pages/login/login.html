@@ -1,0 +1,25 @@
+<ion-content no-padding>
+<div class="container">
+  <img src="./assets/imgs/logo-p.png" alt="">
+
+  <div class="login">
+    <h1>Delivery Boy</h1>
+
+    <ion-item>
+      <ion-label color="primary"><ion-icon name="ios-person"></ion-icon></ion-label>
+      <ion-input type="text" [(ngModel)]="userData.username" [value]="userData.username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary"><ion-icon name="md-key"></ion-icon></ion-label>
+      <ion-input type="password" [(ngModel)]="userData.password" [value]="userData.password"></ion-input>
+    </ion-item>   
+    <ion-item no-lines>
+      <ion-label>Remember Me</ion-label>
+      <ion-checkbox [(ngModel)]="remember" ></ion-checkbox>
+    </ion-item>
+    <button (click)="onLogin()" ion-button round>Login</button>
+  </div>
+</div>
+
+</ion-content>

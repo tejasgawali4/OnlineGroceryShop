@@ -1,0 +1,43 @@
+page-home {
+
+    p{
+        padding:0;
+        margin:0;
+        margin-bottom:3px;
+    }
+
+    .scroll-content{
+        background: #f8f8f8 ;
+    }
+
+    .container .row:nth-child(1){
+        text-align: center;
+        font-size: 2rem;
+        color:#3ac746;
+    }
+
+    .head p:nth-child(1){
+        float: left;
+        color:#3ac746;
+    }
+
+    .head p:nth-child(2){
+        float: right;
+        color:#3ac746;
+    }
+
+    .container .row:nth-child(3){
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    .container .button{
+        padding: 0.7rem 0.9rem;
+        background: rgb(224, 224, 224);
+        height: auto;
+        font-size: 1.6rem;
+    }
+
+    .button:nth-child(1){
+       background: #3ac746;
+    }
+}
